@@ -10,6 +10,7 @@
 2. 用户每次提问前，先匹配触发词
 3. 命中触发词时，主动读取对应 skill 文档，再回答
 4. 未命中时，按常规方式回答，但如果生成的内容涉及某个领域，仍应主动检查是否有对应 skill
+5. 新增或修改任何 skill 文件后，必须同步更新本文件的「Skill 触发索引」表，将该文件的 keywords 和 triggers 字段合并写入对应行
 
 ## 目录结构
 
@@ -43,7 +44,7 @@ skill/
 
 | 触发词 / 场景 | 读取文件 |
 |--------------|---------|
-| *(待填充，随 skill 内容同步更新)* | — |
+| 中间件、middleware、认证、JWT、API Key、限流、rate limit、输入验证、XSS、SQL注入、CORS、CSRF、GZip、缓存中间件、ETag、Metrics、链路追踪、多租户、Feature Flag、设计中间件、写认证逻辑、实现限流、防止API滥用、保护接口安全、跨域问题、响应压缩、接口监控、多租户隔离、灰度发布 | [coding/backend/middleware.md](./coding/backend/middleware.md) |
 
 > 维护说明：每次新增或修改 skill 文件的 `keywords` / `triggers` 字段后，同步更新此表。
 
