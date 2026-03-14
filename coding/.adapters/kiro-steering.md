@@ -1,28 +1,34 @@
 # Kiro Steering 接入模板
 
-将此文件复制到项目的 `.kiro/steering/` 目录下，并按需修改引用路径。
+将此文件复制到项目的 `.kiro/steering/` 目录下。
 
 ---
 
-本项目遵循以下开发规范，规范文档托管于 https://github.com/lizhanglan/skill
+## Skill 仓库
 
-## 后端规范
-- API 设计：参考 backend/api-design.md
-- 认证授权：参考 backend/auth.md
-- 中间件：参考 backend/middleware.md
-- 数据库：参考 backend/database.md
-- 缓存：参考 backend/cache.md
-- 错误处理：参考 backend/error-handling.md
-- 日志：参考 backend/logging.md
+本项目开发者维护了一个个人 skill 仓库：https://github.com/lizhanglan/skill
 
-## 前端规范
-- 组件设计：参考 frontend/component-design.md
-- 状态管理：参考 frontend/state-management.md
-- API 客户端：参考 frontend/api-client.md
-- 样式：参考 frontend/styling.md
+### 工作方式
 
-## 通用规范
-- 项目结构：参考 fullstack/project-structure.md
-- 命名规范：参考 fullstack/naming-conventions.md
-- Git 工作流：参考 fullstack/git-workflow.md
-- 安全：参考 fullstack/security.md
+1. 对话开始时，读取 skill 仓库的 `README.md`，加载触发索引表
+2. 每次回答前，用用户的问题匹配触发索引表中的触发词
+3. 命中时，读取对应 skill 文档，严格遵守其中的核心原则和反例约束，再生成代码或回答
+4. 未命中时，如果生成内容涉及某个领域（如缓存、认证、组件设计），仍应主动检查是否有对应 skill
+
+### 规范优先级
+
+skill 文档中的规范 > 通用最佳实践 > 默认行为
+
+---
+
+## 后端规范（摘要）
+
+详见 `coding/backend/` 目录下各文件。
+
+## 前端规范（摘要）
+
+详见 `coding/frontend/` 目录下各文件。
+
+## 通用规范（摘要）
+
+详见 `coding/fullstack/` 目录下各文件。
